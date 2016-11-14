@@ -1,5 +1,7 @@
 package array.controller;
 
+import javax.swing.ComboBoxModel;
+
 import array.model.Hipster;
 import array.view.HipsterFrame;
 
@@ -14,6 +16,11 @@ public ArrayController()
 {
 	thirdLevelHipster();
 	
+	for(int index = 0; index < hipsters.length; index++)
+	{
+		hipsters[index] = new Hipster("Hipster # " + index);
+	}
+	
 	hipsters = new Hipster[6];
 
 }
@@ -24,10 +31,6 @@ private void thirdLevelHipster()
 public void start()
 {
 	
-	for(int index = 0; index < hipsters.length; index++)
-	{
-		hipsters[index] = new Hipster("Hipster # " + index);
-	}
 	
 	for(Hipster currentHipster : hipsters)
 	{
@@ -46,6 +49,11 @@ public void start()
 
 	
 
+}
+public ComboBoxModel getWords()
+{
+	// TODO Auto-generated method stub
+	return null;
 }
 
 

@@ -1,6 +1,6 @@
 package array.view;
 
-import java.awt.color.*;
+import java.awt.*;
 import javax.swing.*;
 import array.controller.ArrayController;
 
@@ -39,13 +39,18 @@ public class HipsterPanel
 	}
 	private void setupListeners()
 	{
-		dropDown.addActionListener(new ActionListener);
+		dropDown.addActionListener(new ActionListener()
 		{
-			public void actionPerform
+			public void actionPerformed(ActionEvent selection)
+			{
+				String selectedText = baseController.getHipsters()[dropDown.getSelectedIndex()].toString();
+				wordsLabel.setText(selectedText);
+			}
 		
-		{
+		
 			
 		});
-	}
-	}	
+		{
+		}
+}	
 }
