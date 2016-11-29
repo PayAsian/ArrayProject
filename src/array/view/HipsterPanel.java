@@ -4,7 +4,7 @@ import java.awt.*;
 import javax.swing.*;
 import array.controller.ArrayController;
 
-public class HipsterPanel
+public class HipsterPanel extends JPanel
 {
 	private ArrayController baseController;
 	private JButton myButton;
@@ -18,7 +18,7 @@ public class HipsterPanel
 		myButton = new JButton("Click here!!");
 		wordsLabel = new JLabel("such words!!");
 		baseLayout = new SpringLayout();
-		dropDown = new JComboBox(baseController.getWords());
+		dropDown = new JComboBox(baseController.getHipsters());
 		
 		setupPanel();
 		setupLayout();
